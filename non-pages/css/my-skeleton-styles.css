@@ -1,0 +1,30 @@
+/* Modifications to skeleton  */
+
+.container {
+    background-color: aqua;
+}
+.box {
+	border: 1px solid #000000;
+	border-radius: .5em;
+        background-color: beige;
+}
+
+.active { /* not working */
+    background-color: #1E456D;
+}
+
+.button {
+    font-size:.5em;
+    padding: 0 20px;
+}
+.button.button-primary {
+    background-color: #112233;
+    border-color: red; 
+}
+
+.button.button-primary:hover, .button.button-primary:focus {
+  color: #000;
+  background-color: yellow;
+  border-color: green;
+}
+
