@@ -1,7 +1,7 @@
 <!--start header.php-->
 
             <?php
-                //display unique page titles
+                //display unique page titles using $pathparts['basename'] to find the containing folder
                 $page_heading="Sleek Panther Productions"; //initialize to a defualt value, so if I forget to include a page, it still gets heading text
 
                 if ($path_parts['dirname'] == "/cs008/assignment5.0") {

@@ -3,16 +3,7 @@
         <nav class="twelve columns centered"> <!-- centered is my class -->
             <ul>
                 <?php
-                // This sets the current page to not be a link. Repeat this if block for each menu item 
-//                if ($path_parts['filename'] == "index") {
-//                    print "<li><a class='button button-primary active'>Home</a>  </li> \n\t\t"; //active is my class
-//                    print "<li><a class='button button-primary' href='form/'>Form</a>  </li> \n\t\t"; //active is my class
-//                } 
-//                elseif ($path_parts['filename'] == "form") {
-//                    print "<li><a href='index.php' class='button button-primary'>Home</a>  </li> \n\t\t";
-//                    print "<li><a class='button button-primary active'>Form</a>  </li> \n\t\t"; //active is my class
-//                }
-                
+                //display the navigation links STARTING from the home page
                 if ($path_parts['dirname'] == "/cs008/assignment5.0") {
                     print "<li><a class='button button-primary active'>Home</a>  </li> \n\t\t"; //active is my class, anchor tag with no link
                     print "<li><a class='button button-primary' href='services/'>Services</a></li> \n\t\t";

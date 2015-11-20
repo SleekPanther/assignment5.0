@@ -44,7 +44,8 @@
             print_r($path_parts);
             print "</pre>";
         }        
-        
+
+        //link to the correct files for the main page. I use 'pa
         if ($path_parts['dirname'] == "/cs008/assignment5.0") {
             print ' <!-- CSS For Skeleton–––––––––––––––––––––––––––––––––––––––––––––––––– -->'."\n";
             print '<link rel="stylesheet" href="non-pages/skeleton-2.0.4/css/normalize.css">'."\n";
