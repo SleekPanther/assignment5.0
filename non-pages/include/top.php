@@ -45,7 +45,7 @@
             print "</pre>";
         }        
 
-        //link to the correct files for the main page. I use 'pa
+        //link to the correct files for the main page. I use pathparts['dirname'] to make sure I know what folder contains the file
         if ($path_parts['dirname'] == "/cs008/assignment5.0") {
             print ' <!-- CSS For Skeleton–––––––––––––––––––––––––––––––––––––––––––––––––– -->'."\n";
             print '<link rel="stylesheet" href="non-pages/skeleton-2.0.4/css/normalize.css">'."\n";
@@ -102,7 +102,7 @@
     <!-- ################ body section ######################### -->
 
     <?php
-// giving each body tag an id really helps with css later on
+    // giving each body tag an id really helps with css later on
     //## access just the 'filename' portion of the path array
             print '<body id="' . $path_parts['filename'] . '">';
             
