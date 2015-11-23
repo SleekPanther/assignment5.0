@@ -5,7 +5,71 @@
   <!-- Primary Page Layout
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
 
-    
+        <section class="row">
+            <section class="twelve columns box">
+                <section>
+                    
+                </section>
+                <section class="galleria margin-auto">
+                    <?php   //in this section I use php to print the images required for the slideshow. The fileanames are all stored in a csv file
+                        $debug = false;
+
+                    if (isset($_GET["debug"])) {
+                        $debug = true;
+                    }
+
+                    $myFileName = "non-pages/images-list";
+                    $fileExt = ".csv";
+                    $filename = $myFileName . $fileExt;
+
+                    if ($debug)
+                        print "\n\n<p>filename is " . $filename;
+
+                    $file = fopen($filename, "r");
+                    if ($file) {
+                        if ($debug)
+                            print "<p>Begin reading data into an array.</p>\n";
+
+                        /* This reads the first row, which in our case is the column headers */
+                        //$headers = fgetcsv($file);
+
+                        if ($debug) {
+                            print "<p>Finished reading headers.</p>\n";
+                            print "<p>My header array<p><pre> ";
+                            print_r($headers);
+                            print "</pre></p>";
+                        }
+                        /* the while (similar to a for loop) loop keeps executing until we reach 
+                         * the end of the file at which point it stops. the resulting variable 
+                         * $records is an array with all our data.
+                         */
+                        while (!feof($file)) {
+                            $records[] = fgetcsv($file);
+                        }
+
+                        fclose($file);  //closes the file
+
+                        if ($debug) {
+                            print "<p>Finished reading data. File closed.</p>\n";
+                            print "<p>My data array<p><pre> ";
+                            print_r($records);
+                            print "</pre></p>";
+                        }
+                    }
+                    
+                    foreach ($records as $oneRecord) {  //print out information from the csv file. column 1 is the filename & column 2 is the alt text
+                        print '<img  src="../images/gallery/gallery1/' . $oneRecord[1] . '" alt="' . $oneRecord[2] . '">' . "\n\t\t\t";
+                    }
+                ?>
+                    <!-- manual code
+                    <img src="../images/gallery/gallery1/image001.jpg" alt="image 1">
+                    <img src="../images/gallery/gallery1/image002.jpg">
+                    <img src="../images/gallery/gallery1/image003.jpg">
+                    <img src="../images/gallery/gallery1/image004.jpg">
+                    <img src="../images/gallery/gallery1/image005.jpg">-->
+                </section>
+            </section>
+        </section>
       <section class="row">
           <section class="six columns box" >
               <h4>Example Business</h4>
@@ -18,20 +82,6 @@
           </section>
       </section>
 
-      <section class="row">
-          <section class="two-thirds column box">
-              <section class="box">2/3 Aenean aliquam ipsum et magna ullamcorper, ut ornare lectus pretium. Nullam hendrerit, mauris at scelerisque semper, turpis turpis molestie erat, a imperdiet sapien sapien eget diam. Donec eget aliquet tellus. Sed porta orci in purus hendrerit, vitae luctus mauris lobortis. Nullam suscipit pharetra libero id tincidunt. Morbi eu elit ac nisi elementum suscipit. Praesent at libero augue. Vestibulum varius max
-              </section>
-              <section class="box">2/3 Aenean aliquam ipsum et magna ullamcorper, ut ornare lectus pretium. Nullam hendrerit, mauris at scelerisque semper, turpis turpis molestie erat, a imperdiet sapien sapien eget diam. Donec eget aliquet tellus. Sed porta orci in purus hendrerit, vitae luctus mauris lobortis. Nullam suscipit pharetra libero id tincidunt. Morbi eu elit ac nisi elementum suscipit. Praesent at libero augue. Vestibulum varius max
-              </section>
-          </section>
-
-          <section class="one-third column box" >
-              elit id tempor. Nullam lacinia dui nulla, sit amet dapibus odio ultricies eget. Pellentesque accumsan tincidunt tempus. Donec mi lorem, semper at metus eu, scelerisque tincidunt quam. Nunc id erat vel lectus suscipit consequat dapibus at tellus. Cras id tristique velit. Etiam dignissim, turpis sit amet sodales auctor, diam arcu ultrices sem, nec congue nisi sem quis justo.
-          </section>
-
-        </section>
-  
     <?php 
         if ($path_parts['dirname'] == "/cs008/assignment5.0") {
           include "non-pages/include/footer.php";

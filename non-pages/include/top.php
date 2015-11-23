@@ -68,6 +68,19 @@
             print '<!-- Favicon––––––––––––––––––––––––––––––––––––––––––––––– -->'."\n";
             print '<link rel="icon" type="image/png" href="../images/0components/favicon.png">'."\n";
         }
+        if ($path_parts['dirname'] == "/cs008/assignment5.0/gallery") { //link to specific javascript files for gallery to work
+            print "\n".'<script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.js"></script> <!-- link galleria script. Doesn\'t work without jQuery -->'."\n";
+            print '<script src="non-pages/galleria/galleria-1.4.2.min.js"></script>'."\n";
+            print "<!-- run galleria -->
+	<script>
+		Galleria.loadTheme('non-pages/galleria/themes/classic/galleria.classic.min.js'); //important MUST CHANGE PATH
+		Galleria.configure({ transition: 'fade', transitionSpeed: 2000 }); //2000 milliseconds= 2 second
+		Galleria.run('.galleria', {
+		autoplay: 5000 
+		}); //Time in milliseconds, so it changes every 5 seconds - Noah
+	</script>\n
+<!-- end galleria section -->";
+        }
 
 //****************************************************************
         // Noah's new code to print a page-specific title based on what file is in the URL, instead of having 1 global title for all pages
@@ -104,7 +117,20 @@
     <?php
     // giving each body tag an id really helps with css later on
     //## access just the 'filename' portion of the path array
-            print '<body id="' . $path_parts['filename'] . '">';
+            
+            $split_url = explode('/', $path_parts['dirname']);  //split string at each / character (creates array)
+//            foreach ($split_url as $key) {
+//                print $key."\n";
+//            }
+            $containing_folder = $split_url[count($split_url) -1]; //IMPORTANT this gets the folder that the current file resides in. Used almost everywhere to tell what page I'm on since all my pages are called 'index.php'
+            
+            if ($containing_folder == 'assignment5.0') {    //I have to print the id home because id's can't have periods in them 
+                print '<body id="home">';
+            }
+            else {      //on all other pages, simply print the containing folder for id
+                print '<body id="' . $containing_folder. '">';
+            }
+            //print '<body id="' . $path_parts['filename'] . '">';
             
             if ($path_parts['dirname'] == "/cs008/assignment5.0") {
                 include ("non-pages/include/header.php");
