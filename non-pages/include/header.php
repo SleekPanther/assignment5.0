@@ -4,17 +4,17 @@
                 //display unique page titles using $pathparts['basename'] to find the containing folder
                 $page_heading="Sleek Panther Productions"; //initialize to a defualt value, so if I forget to include a page, it still gets heading text
 
-                if ($path_parts['dirname'] == "/cs008/assignment5.0") {
+                if ($containing_folder == "assignment5.0") {
                     $page_heading = "Home - Sleek Panther Productions"; //Set the value to be printed
-                } elseif ($path_parts['dirname'] == "/cs008/assignment5.0/services") {
+                } elseif ($containing_folder == "services") {
                     $page_heading = "Services"; //Set the value to be printed
-                } elseif ($path_parts['dirname'] == "/cs008/assignment5.0/gallery") {
+                } elseif ($containing_folder == "gallery") {
                     $page_heading = "Gallery"; //Set the value to be printed
-                } elseif ($path_parts['dirname'] == "/cs008/assignment5.0/positions") {
+                } elseif ($containing_folder == "positions") {
                     $page_heading = "Positions"; //Set the value to be printed
-                } elseif ($path_parts['dirname'] == "/cs008/assignment5.0/about") {
+                } elseif ($containing_folder == "about") {
                     $page_heading = "About"; //Set the value to be printed
-                } elseif ($path_parts['dirname'] == "/cs008/assignment5.0/contact") {
+                } elseif ($containing_folder == "contact") {
                     $page_heading = "Contact"; //Set the value to be printed
                 }
             ?>
