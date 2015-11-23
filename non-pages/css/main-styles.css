@@ -20,7 +20,7 @@ header {
     width: 400px;
 }
 footer {
-    background-color:red;
+    background-color: #FFCA68;
 }
 
 
@@ -41,6 +41,14 @@ nav ul li{ /* remove bullets from navigation */
     font-family:courier new; /* qwerty font change */
 }
 
+#home {
+    
+}
+/* gallery------------- */
+.galleria {/*This sets the size of the gallery container box (built-in class))*/
+	width: 100%;
+        height: 700px;      /* height must be in pixels */
+}
 /* classes for easy access to floating properties qwert--------------------*/
  .float-right {
     float:right;
@@ -57,7 +65,7 @@ nav ul li{ /* remove bullets from navigation */
 .clear-both {       /* Class to remove floating properties of any previous element */
     clear: both;
 }
-.align-center{
+.align-center{ /*maybe don't even need anymore (due to "centered" class) */
     text-align:center;
 }
 .margin-auto { /*class to center boxes with css */
