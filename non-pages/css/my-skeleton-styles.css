@@ -1,7 +1,10 @@
 /* Modifications to skeleton  */
 
 .container {
-    background-color: aqua;
+    background-color: #0dd39d;
+}
+.column, .columns { /* maybe remove, messing with skeleton styles */
+    /*margin: 0 1%; */
 }
 .box {
 	border: 1px solid #000000;

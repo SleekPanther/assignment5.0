@@ -50,6 +50,7 @@
         }        
 
         //link to the correct files for the main page. I use pathparts['dirname'] to make sure I know what folder contains the file
+        print '<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css"> <!-- font-awesome style on all pages -->';
         if ($containing_folder == "assignment5.0") {
             print ' <!-- CSS For Skeleton–––––––––––––––––––––––––––––––––––––––––––––––––– -->'."\n";
             print '<link rel="stylesheet" href="non-pages/skeleton-2.0.4/css/normalize.css">'."\n";
