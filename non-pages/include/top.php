@@ -50,21 +50,26 @@
         }        
 
         //link to the correct files for the main page. I use pathparts['dirname'] to make sure I know what folder contains the file
+        //print '<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css"> <!-- font-awesome glyphs -->';
         if ($containing_folder == "assignment5.0") {
-            print ' <!-- CSS For Skeleton–––––––––––––––––––––––––––––––––––––––––––––––––– -->'."\n";
+            print "<!-- CSS For Skeleton–––––––––––––––––––––––––––––––––––––––––––––––––--->\n";
             print '<link rel="stylesheet" href="non-pages/skeleton-2.0.4/css/normalize.css">'."\n";
             print '<link rel="stylesheet" href="non-pages/skeleton-2.0.4/css/skeleton.css">'."\n";
-            print '<!-- My css -->';
+            print "<!--Font Awesome -->\n";
+            print '<link rel="stylesheet" href="non-pages/font-awesome-4.5.0/css/font-awesome.min.css"> <!-- font-awesome glyphs -->';
+            print "<!-- My css -->\n";
             print '<link rel="stylesheet" href="non-pages/css/my-skeleton-styles.css">'."\n";
             print '<link rel="stylesheet" href="non-pages/css/main-styles.css">'."\n";
 
-            print '<!-- Favicon––––––––––––––––––––––––––––––––––––––––––––––– -->'."\n";
+            print '<!-- Favicon–––––––––––––––––––––––––––––––––––––––––––––––->'."\n";
             print '<link rel="icon" type="image/png" href="images/0components/favicon.png">'."\n";
         }
         else {  //if it's page other than the home page, it will be 1 directory down, so all links have to go up 1 directory 1st
             print ' <!-- CSS For Skeleton–––––––––––––––––––––––––––––––––––––––––––––––––– -->'."\n";
             print '<link rel="stylesheet" href="../non-pages/skeleton-2.0.4/css/normalize.css">'."\n";
             print '<link rel="stylesheet" href="../non-pages/skeleton-2.0.4/css/skeleton.css">'."\n";
+            print '<!--Font Awesome -->';
+            print '<link rel="stylesheet" href="../non-pages/font-awesome-4.5.0/css/font-awesome.min.css"> <!-- font-awesome glyphs -->';
             print '<!-- My css -->';
             print '<link rel="stylesheet" href="../non-pages/css/my-skeleton-styles.css">'."\n";
             print '<link rel="stylesheet" href="../non-pages/css/main-styles.css">'."\n";
@@ -101,18 +106,16 @@
         } elseif ($containing_folder == "contact") {
             print "<title>Contact - Sleek Panther Productions</title> \n\t\t";
         } else {
-            print "<title>Sleek Panther Productions</title> \n\t\t";        //If somehow there's an extra page not taken account of, it will just print a default title
+            print "<title>Sleek Panther Productions</title> \n\t\t";        //If somehow there's an unaccounted page, it will just print a default title
         }
         
         // %^%^%^%^%^%^%^%^%^%^%^%^%^%^%^%^%^%^%^%^%^%^%^%^%^%^%^%^%^%^%^%^%^%^%^%^%^%
-        //
-        // inlcude all libraries
-//        require_once('lib/security.php');
-//        
-//        if ($path_parts['filename'] == "form") {
-//            include "lib/validation-functions.php";
-//            include "lib/mail-message.php";
-//        }
+        //inlcude all libraries for contact form page
+        if ($containing_folder == "contact") {
+            require_once('../non-pages/lib/security.php');
+            include "../non-pages/lib/validation-functions.php";
+            include "../non-pages/lib/mail-message.php";
+        }
         ?>
         
     </head>

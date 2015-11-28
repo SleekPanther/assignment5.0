@@ -72,13 +72,11 @@
         </section>
       <section class="row">
           <section class="six columns box" >
-              <h4>Example Business</h4>
-              <h1><?php print $path_parts['dirname'] ?></h1>
-              <p>This index.html page is a placeholder with the CSS, font and favicon. It's just waiting for you to add some content! If you need some help hit up the <a href="http://www.getskeleton.com">Skeleton documentation</a>.</p>
+              <h4>Examples</h4>
+              <p>Enjoy our slideshow of previous logos we've created for other clients. Your imagination is really the limit, so dream big. It's really up to you and what you think your business needs. We can always make suggestions but we've found that customers are more satisfied if it's their idea and we just are here to help them make it a reality.</p>
           </section>
           <section class="six columns box">
-              <h4>Example Business2</h4>
-              <p>asdf This index.html page is a placeholder with the CSS, font and favicon. It's just waiting for you to add some content! If you need some help hit up the <a href="http://www.getskeleton.com">Skeleton documentation</a>.</p>
+              <p>If you like something you see, check out more information of the services page or send us an email so we can get a better idea of how we can help you. Feel free to send examples of other business logos that you like. However, we can't promise to replicate it exactly because that's stealing. But it doesn't hurt to send it out way to give us somewhere to start.</p>
           </section>
       </section>
 
