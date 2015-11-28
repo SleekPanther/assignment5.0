@@ -11,6 +11,9 @@
 	border-radius: .5em;
         background-color: beige;
 }
+/*.box .box {
+    background-color: red;
+}*/
 
 .active { /* not working */
     background-color: #1E456D;

@@ -62,6 +62,92 @@ nav ul li{ /* remove bullets from navigation */
 .galleria-theme-classic { /*override black background, so you can see next/previous bottons */
     background: #4A4A4A;
 }
+
+/* need to clear any floats that may exist */
+fieldset{
+    border: 1px solid #00498e;
+    clear: both;
+}
+
+
+fieldset {
+    padding: 0 .6em;
+}
+@media (max-width:800px) { /*make padding disappear when the screen is too small */
+    fieldset {
+        padding: 0;
+    }
+}
+/* just pushes content to left side of the box. */
+fieldset.contact{
+    float: left;
+}
+/* when you look at the labels this pushes then next to the input and right
+aligns them. Display block means they are each on their own line. */
+fieldset.contact label{
+    display: block;
+    text-align: right /* pushes the text to the right where they line up */
+        /* the float left above pushes everything back to the left*/
+}
+
+fieldset.contact input{
+    width: 15em; /* works with above to be the same size for the boxes */
+}
+
+fieldset.buttons{
+    border: none;
+}
+
+fieldset.wrapper {
+    /*border: 0;*/ /* bob had this border, but I don't like it */
+    margin: auto;
+}
+
+fieldset.wrapper legend {
+    color: #00498e;
+    font-size: 1.2em;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+fieldset.wrapper > legend {
+    /* i only want the first legend ie if it follows the class wrapper */
+    font-size: 2em;
+}
+
+label {    /* adds a little space on left & right, so It's not stuck right against the fieldset border */
+    padding: 0 1em;
+}
+
+.required:after { /* use the "after" selector to adda red asterisk next to required fields qwert */
+    color: red;
+    content: "*";
+}
+
+.mistake { /* when  a mistake occurs, change the background. Had to override skeleton's styles'*/
+    color: #fff;
+    background-color: #f00;
+}
+
+#btnSubmit { /*styles to make the submit button look more like a button */
+    display: block;
+    background: #0dd39d;
+    /*color: #0dd39d;*/
+    border: none;
+    padding: 0 20px;
+    -moz-border-radius: 20px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-weight: bold;
+    /* give an outline to the button and blur edges */
+    box-shadow: 0px 0px 10px 2px #000;
+    margin: 10px 0 0 10px;
+}
+#btnSubmit:hover, #btnSubmit:focus { /*make the button look more like a button when hovered or focused */
+    box-shadow: 0px 0px 10px 4px #000;
+    background: #2BFFC6;
+}
+
 /* classes for easy access to floating properties qwert--------------------*/
  .float-right {
     float:right;
@@ -105,6 +191,8 @@ figure {
     margin:0;
     padding:0;
 }
+
+/* section for resizing images. I used id's for each contained within a figure element  qwert--------------------*/
 #monitor-img {
     width:100%; 
 }
@@ -115,5 +203,3 @@ figure {
 #success-image, #failure-image {
     width: 300px;
 }
-
-/* section for resizing images. I used id's for each contained within a figure element  qwert--------------------*/

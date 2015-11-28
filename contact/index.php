@@ -32,12 +32,12 @@ $yourURL = $domain . $phpSelf;
 $firstName = "";
 $middleName= "";
 $lastName = "";
-$email = "noah.patullo@uvm.edu";
+$email = "noahpatullo@gmail.com";
 $formDevice = "Computer";       //this sets the default select box when the form loads
 $productLaunches = true;    // checked
-$policyChanges = false; // not checked
-$newStaff = false;  //not checked, but multiple could be checked @ the start
-$doYouHateForms = "YES I hate forms";       //This must math text in the php "if($doYouHateForms=="YES I hate forms") print 'checked" to display a default checked value
+$promotional = false; // not checked
+$newPositions = false;  //not checked, but multiple could be checked @ the start
+$trafficSource = "Word of mouth";       //This must math text in the php "if($doYouHateForms=="YES I hate forms") print 'checked" to display a default checked value
 
 //%^%^%^%^%^%^%^%^%^%^%^%^%^%^%^%^%^%^%
 //
@@ -51,9 +51,9 @@ $lastNameERROR = false;
 $emailERROR = false;
 $formDeviceERROR = false;
 $productLaunchesERRORS = false;
-$policyChangesERRORS = false;
-$newStaffERRORS = false;
-$doYouHateFormsERROR = false;
+$promotionalERROR = false;
+$newPositionsERROR = false;
+$trafficSourceERROR = false;
 
 //%^%^%^%^%^%^%^%^%^%^%^%^%^%^%^%^%^%^%
 //
@@ -100,7 +100,7 @@ if (isset($_POST["btnSubmit"])) {  //tests to see if the form was submitted, udi
     }
     
     $lastName = htmlentities($_POST["txtLastName"], ENT_QUOTES, "UTF-8");
-    $dataRecord[] = $lastName;    
+    $dataRecord[] = $lastName;
 
     $email = filter_var($_POST["txtEmail"], FILTER_SANITIZE_EMAIL);
     $dataRecord[] = $email; //I am doing this just after I sanitize the data in SECTION 2b. You would need to do this for every from variable and this array is what we will save to the csv file.
@@ -117,25 +117,25 @@ if (isset($_POST["btnSubmit"])) {  //tests to see if the form was submitted, udi
         $dataRecord[] = ""; 
     }
     
-    if (isset($_POST["chkPolicyChanges"])) {
-        $policyChanges = true;  //line below gets the actual "value" from the  form instead of just 1 or 0 for true/false. Makes csv file more readable
-        $dataRecord[] = htmlentities($_POST["chkPolicyChanges"], ENT_QUOTES, "UTF-8");     
+    if (isset($_POST["chkPromotional"])) {
+        $promotional = true;  //line below gets the actual "value" from the  form instead of just 1 or 0 for true/false. Makes csv file more readable
+        $dataRecord[] = htmlentities($_POST["chkPromotional"], ENT_QUOTES, "UTF-8");     
     } else {
-        $policyChanges = false;
+        $promotional = false;
         $dataRecord[] = ""; 
     }
     
-    if (isset($_POST["chkNewStaff"])) {
-        $newStaff = true;  //line below gets the actual "value" from the  form instead of just 1 or 0 for true/false. Makes csv file more readable
-        $dataRecord[] = htmlentities($_POST["chkNewStaff"], ENT_QUOTES, "UTF-8");     
+    if (isset($_POST["chkNewPositions"])) {
+        $newPositions = true;  //line below gets the actual "value" from the  form instead of just 1 or 0 for true/false. Makes csv file more readable
+        $dataRecord[] = htmlentities($_POST["chkNewPositions"], ENT_QUOTES, "UTF-8");     
     } else {
-        $newStaff = false;
+        $newPositions = false;
         $dataRecord[] = ""; 
     }
 //end checkbox section
     
-    $doYouHateForms = htmlentities($_POST["radDoYouHateForms"], ENT_QUOTES, "UTF-8");
-    $dataRecord[] = $doYouHateForms;
+    $trafficSource = htmlentities($_POST["radHowDidYouHearAboutUs"], ENT_QUOTES, "UTF-8");
+    $dataRecord[] = $trafficSource;
 
     //@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
     //
@@ -262,7 +262,7 @@ if (isset($_POST["btnSubmit"])) {  //tests to see if the form was submitted, udi
         
         // subject of mail should make sense to your form
         $todaysDate = strftime("%x");
-        $subject = "Mailing List: " . $todaysDate; // BOB's   $subject = "Research Study: " . $todaysDate;
+        $subject = "Sleek Panther Productions Mailing List: " . $todaysDate;
         
         $mailed = sendMail($to, $cc, $bcc, $from, $subject, $message);
 
@@ -276,15 +276,13 @@ if (isset($_POST["btnSubmit"])) {  //tests to see if the form was submitted, udi
 ?>
   <!-- Primary Page Layout
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-
-    
         <section class="row">
             <section class="twelve columns box">
               <section class="six columns box" >
                   <h2>How to Reach Us</h2>
                   <p>You can send us mail, thou who really does that anymore it's all digital nowadays.</p>
                   <p>So why not send us an email: <a href='mailto:noah.patullo@uvm.edu' class='italic'>Noah.Patullo@uvm.edu</a></p>
-                  <p>Or you can fill out the form below to be added to our mailing lists and stay in the loop</p>
+                  <p>Or you can fill out the form below to be added to our mailing lists and stay in the loop. We are trying to collect information about our customers and how they found us to see what's working and what's not</p>
               </section>
               <section class="six columns box">
                   <h3>Directions</h3>
@@ -295,7 +293,8 @@ if (isset($_POST["btnSubmit"])) {  //tests to see if the form was submitted, udi
         </section>
 
         <section class="row">
-            <article class="twelve column box" >      
+          <section class="twelve columns box">
+            <article class="ten columns offset-by-one box " >      
     <?php
     //####################################
     //
@@ -410,7 +409,7 @@ if (isset($_POST["btnSubmit"])) {  //tests to see if the form was submitted, udi
             
             <fieldset class="wrapper">
                 <legend>Sign Up Today</legend>
-                <p>Sign up for our mailing list to stay informed about Sleek Panther Productions.</p>
+                <p>Sign up for our mailing list to stay informed about Sleek Panther Productions</p>
 
                 <fieldset class="wrapperTwo">
                     <legend>Please complete the following form</legend>
@@ -450,7 +449,7 @@ if (isset($_POST["btnSubmit"])) {  //tests to see if the form was submitted, udi
                                    <?php if ($printEmailAutoFocus) {print 'autofocus';} ?> >
                         </label>
                     </fieldset> <!-- ends contact -->
-                        <fieldset  ><!-- <fieldset  class="listbox"> -->
+                        <fieldset  class="listbox">
                             <label for="selFormDevice">How are you filling out this form?</label>   <!-- sel is for "select box" -->
                             <select id="selFormDevice" 
                                     name="selFormDevice" 
@@ -478,50 +477,64 @@ if (isset($_POST["btnSubmit"])) {  //tests to see if the form was submitted, udi
                                               <?php print 'tabindex="'.$tabindex_counter++.'"' ;?>> Major Product Launches</label>
 
                                 <label><input type="checkbox" 
-                                              id="chkPolicyChanges" 
-                                              name="chkPolicyChanges" 
-                                              value="Yes Policy Changes Emails"
-                                              <?php if ($policyChanges) print ' checked '; // print it ONLY if it's true'?>
-                                              <?php print 'tabindex="'.$tabindex_counter++.'"' ;?>> Policy Changes</label>
+                                              id="chkPromotional" 
+                                              name="chkPromotional" 
+                                              value="Yes Promotional Events/Giveaways emails"
+                                              <?php if ($promotional) print ' checked '; // print it ONLY if it's true'?>
+                                              <?php print 'tabindex="'.$tabindex_counter++.'"' ;?>> Free Promotional Events/Giveaways emails</label>
                                 
                                 <label><input type="checkbox" 
-                                              id="chkNewStaff" 
-                                              name="chkNewStaff" 
-                                              value="Yes Emails about New Staff"
-                                              <?php if ($newStaff) print ' checked '; // print it ONLY if it's true'?>
-                                              <?php print 'tabindex="'.$tabindex_counter++.'"' ;?>> New Staff</label>
+                                              id="chkNewPositions" 
+                                              name="chkNewPositions" 
+                                              value="Yes Emails about New Positions"
+                                              <?php if ($newPositions) print ' checked '; // print it ONLY if it's true'?>
+                                              <?php print 'tabindex="'.$tabindex_counter++.'"' ;?>> New Positions (jobs)</label>
                             </fieldset>
                             
                             <fieldset class="radio">
-                                <legend>Do you hate filling out forms/surveys?</legend>
+                                <legend>How did you find out about us?</legend>
                                 <label><input type="radio" 
-                                              id="radDoYouHateFormsYes" 
-                                              name="radDoYouHateForms" 
-                                              value="YES I hate forms"
-                                              <?php print 'tabindex="'.$tabindex_counter++.'"' ;?>
-                                              <?php if($doYouHateForms=="YES I hate forms") {print 'checked';} ?>
-                                              >Yes, I hate forms</label>
+                                              id="radHowDidYouHearAboutUsMouth" 
+                                              name="radHowDidYouHearAboutUs" 
+                                              value="Word of mouth"
+                                              <?php print 'tabindex="'.$tabindex_counter++.'"' ; ?>
+                                              <?php if($trafficSource=="Word of mouth") {print 'checked';} ?>
+                                              >Word of mouth</label>
                                 <label><input type="radio" 
-                                              id="radDoYouHateFormsNo" 
-                                              name="radDoYouHateForms" 
-                                              value="No, I love forms"
+                                              id="radHowDidYouHearAboutUsSearch" 
+                                              name="radHowDidYouHearAboutUs" 
+                                              value="Search Engine"
                                               <?php print 'tabindex="'.$tabindex_counter++.'"' ;?>
-                                              <?php if($doYouHateForms=="No, I love forms") print 'checked'?>
-                                              >No, I love forms</label>
+                                              <?php if($trafficSource=="Search Engine") print 'checked'?>
+                                              >Search Engine</label>
                                 <label><input type="radio" 
-                                              id="radDoYouHateFormsMeh" 
-                                              name="radDoYouHateForms" 
-                                              value="Meh, I do not mind"
+                                              id="radHowDidYouHearAboutUsSocial" 
+                                              name="radHowDidYouHearAboutUs" 
+                                              value="Social Media"
                                               <?php print 'tabindex="'.$tabindex_counter++.'"' ;?>
-                                              <?php if($doYouHateForms=="Meh, I do not mind") print 'checked'?>
-                                              >Meh, I do not mind</label>
+                                              <?php if($trafficSource=="Social Media") print 'checked'?>
+                                              >Social Media</label>
+                                <label><input type="radio" 
+                                              id="radHowDidYouHearAboutUsInternet" 
+                                              name="radHowDidYouHearAboutUs" 
+                                              value="Internet Advertisement"
+                                              <?php print 'tabindex="'.$tabindex_counter++.'"' ;?>
+                                              <?php if($trafficSource=="Internet Advertisement") print 'checked'?>
+                                              >Internet Advertisement</label>
+                                <label><input type="radio" 
+                                              id="radHowDidYouHearAboutUsOther" 
+                                              name="radHowDidYouHearAboutUs" 
+                                              value="Other"
+                                              <?php print 'tabindex="'.$tabindex_counter++.'"' ;?>
+                                              <?php if($trafficSource=="Other") print 'checked'?>
+                                              >Other</label>
                             </fieldset>
 
                 </fieldset> <!-- ends wrapper Two -->
                 
                 <fieldset class="buttons">
                     <legend></legend>
-                    <input type="submit" id="btnSubmit" name="btnSubmit" value="Register" <?php print 'tabindex="'.$tabindex_counter++.'"' ;?> class="button">
+                    <input type="submit" id="btnSubmit" name="btnSubmit" value="Register" <?php print 'tabindex="'.$tabindex_counter++.'"' ;?> >
                 </fieldset> <!-- ends buttons -->
             </fieldset> <!-- Ends Wrapper -->
         </form>
@@ -530,7 +543,7 @@ if (isset($_POST["btnSubmit"])) {  //tests to see if the form was submitted, udi
     } // end body submit from line "print $message;" before section 3b
     ?>
             </article>
-
+              </section>
         </section>
   
     <?php 
