@@ -106,18 +106,16 @@
         } elseif ($containing_folder == "contact") {
             print "<title>Contact - Sleek Panther Productions</title> \n\t\t";
         } else {
-            print "<title>Sleek Panther Productions</title> \n\t\t";        //If somehow there's an extra page not taken account of, it will just print a default title
+            print "<title>Sleek Panther Productions</title> \n\t\t";        //If somehow there's an unaccounted page, it will just print a default title
         }
         
         // %^%^%^%^%^%^%^%^%^%^%^%^%^%^%^%^%^%^%^%^%^%^%^%^%^%^%^%^%^%^%^%^%^%^%^%^%^%
-        //
-        // inlcude all libraries
-//        require_once('lib/security.php');
-//        
-//        if ($path_parts['filename'] == "form") {
-//            include "lib/validation-functions.php";
-//            include "lib/mail-message.php";
-//        }
+        //inlcude all libraries for contact form page
+        if ($containing_folder == "contact") {
+            require_once('../non-pages/lib/security.php');
+            include "../non-pages/lib/validation-functions.php";
+            include "../non-pages/lib/mail-message.php";
+        }
         ?>
         
     </head>

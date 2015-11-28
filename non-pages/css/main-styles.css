@@ -112,5 +112,8 @@ figure {
     width: 200px;
     padding:0 10px;
 }
+#success-image, #failure-image {
+    width: 300px;
+}
 
 /* section for resizing images. I used id's for each contained within a figure element  qwert--------------------*/
