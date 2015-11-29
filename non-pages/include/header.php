@@ -21,7 +21,7 @@
 
         <section >
             <header>
-                <section class="margin-auto align-center" id="header">
+                <section class="align-center" id="header">
                     <h1><?php print $page_heading ?></h1><!-- print page heading variable, set in the code above -->
                 </section>
             </header>

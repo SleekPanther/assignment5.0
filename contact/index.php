@@ -532,10 +532,9 @@ if (isset($_POST["btnSubmit"])) {  //tests to see if the form was submitted, udi
 
                 </fieldset> <!-- ends wrapper Two -->
                 
-                <fieldset class="buttons">
-                    <legend></legend>
+                <!--<fieldset class="buttons">-->
                     <input type="submit" id="btnSubmit" name="btnSubmit" value="Register" <?php print 'tabindex="'.$tabindex_counter++.'"' ;?> >
-                </fieldset> <!-- ends buttons -->
+                <!--</fieldset>--> <!-- ends buttons -->
             </fieldset> <!-- Ends Wrapper -->
         </form>
     
