@@ -61,16 +61,10 @@
                         print '<img  src="../images/gallery/gallery1/' . $oneRecord[1] . '" alt="' . $oneRecord[2] . '">' . "\n\t\t\t";
                     }
                 ?>
-                    <!-- manual code
-                    <img src="../images/gallery/gallery1/image001.jpg" alt="image 1">
-                    <img src="../images/gallery/gallery1/image002.jpg">
-                    <img src="../images/gallery/gallery1/image003.jpg">
-                    <img src="../images/gallery/gallery1/image004.jpg">
-                    <img src="../images/gallery/gallery1/image005.jpg">-->
                 </section>
             </section>
         </section>
-      <section class="row">
+      <section class="row box">
           <section class="six columns box" >
               <h4>Examples</h4>
               <p>Enjoy our slideshow of previous logos we've created for other clients. Your imagination is really the limit, so dream big. It's really up to you and what you think your business needs. We can always make suggestions but we've found that customers are more satisfied if it's their idea and we just are here to help them make it a reality.</p>

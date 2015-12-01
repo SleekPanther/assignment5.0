@@ -207,6 +207,9 @@ figure {
     width: 200px;
     padding:0 10px;
 }
+#img-t-shirt {
+    width:140px;
+}
 #success-image, #failure-image {
     width: 300px;
 }
