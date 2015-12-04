@@ -19,8 +19,8 @@
           <p>We can work with you to accomplish any of these goals and many more not listed.</p>
       </section>
   </article>
-<section class="row box">
-          <section class="one-half column box">
+<section class="row ">
+          <section class="one-half column ">
               <section class="box">
                   <h3>Want to Learn?</h3>
                   <p>Do you love drawing or creating art on the computer? Are you interested in seeing what a Graphic Designer does?</p>

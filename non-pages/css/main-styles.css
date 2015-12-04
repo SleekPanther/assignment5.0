@@ -1,7 +1,7 @@
 /* Main Styles for the whole site.  press Ctrl+F & search for "qwert" to find the beginning of sections*/
 
 body {
-    background-color: #FFFF8A; 
+    background-color: #FFFF8A;
     font-size: 2.4em;
 }
 
@@ -19,6 +19,7 @@ header {
     font-size: .7em;
     width: 330px;
     padding: 10px;
+    background: #F5F5DC;
 }
 footer {
     background-color: #FFCA68;
@@ -101,8 +102,9 @@ fieldset.contact label{
         /* the float left above pushes everything back to the left*/
 }
 
-fieldset.contact input{
-    width: 15em; /* works with above to be the same size for the boxes */
+fieldset.contact input{  /* this combination of size make the fieldset not go on top of the input boxes */
+    width:60%;
+    min-width: 10em;
 }
 
 fieldset.wrapper {

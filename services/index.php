@@ -14,7 +14,7 @@
       </section>
 
       <section class="row box">
-          <section class="two-thirds column box">
+          <section class="two-thirds column">
               <section class="box">
                   <h3>Logo Design</h3>
                   <p>Got a business, event or idea that needs a quick logo? Well, we can help you out.</p>

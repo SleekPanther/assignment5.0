@@ -411,8 +411,8 @@ if (isset($_POST["btnSubmit"])) {  //tests to see if the form was submitted, udi
                 <legend>Sign Up Today</legend>
                 <p>Sign up for our mailing list to stay informed about Sleek Panther Productions</p>
 
-                <fieldset class="wrapperTwo">
-                    <legend>Please complete the following form</legend>
+                <!--<fieldset class="wrapperTwo">
+                    <legend>Please complete the following form</legend>-->
 
                     <fieldset class="contact">
                         <legend>Contact Info</legend>
@@ -530,7 +530,7 @@ if (isset($_POST["btnSubmit"])) {  //tests to see if the form was submitted, udi
                                               >Other</label>
                             </fieldset>
 
-                </fieldset> <!-- ends wrapper Two -->
+                <!--</fieldset>  ends wrapper Two -->
                 
                 <!--<fieldset class="buttons">-->
                     <input type="submit" id="btnSubmit" name="btnSubmit" value="Register" <?php print 'tabindex="'.$tabindex_counter++.'"' ;?> >
