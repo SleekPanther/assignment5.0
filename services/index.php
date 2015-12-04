@@ -4,40 +4,38 @@
         
   <!-- Primary Page Layout
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-
-    
       <section class="row">
-          <section class="twelve columns box" >
+          <article class="twelve columns box" >
               <h2>Anything You Want (Within Reason)</h2>
               <p>We're here to serve your needs in any way we can (those needs related to Graphic Design of course). See below for our common services.</p>
-          </section>
+          </article>
       </section>
 
       <section class="row box">
           <section class="two-thirds column">
-              <section class="box">
+              <article class="box">
                   <h3>Logo Design</h3>
                   <p>Got a business, event or idea that needs a quick logo? Well, we can help you out.</p>
                   <p>A logo is the identifying part of your brand/company and a you want a well-designed one that people remember. </p>
-              </section>
+              </article>
               <section class="box">
                   <figure id="img-t-shirt" class="float-right">
                       <img src="../images/services/t-shirt.png" alt="T-Shirt">
                   </figure>
-                  <section>
+                  <article>
                     <h3>T-Shirt Designs</h3>
                     <p>Do you need to raise money or spread awareness of you cause or business?</p>
                     <p>T-Shirts are a great way to spread the word about whatever you're doing. But nobody likes to read a whole paragraph printed on your shirt, so that's where we come in. We'll turn your idea into a logo or phrase that you can put on a shirt. We can also connect you with companies to print your designs.</p>
-                  </section>
+                  </article>
               </section>
-              <section class="box">
+              <article class="box">
                   <h3>Website Graphics</h3>
                   <p>If you already have an logo and need those designs adapted for a website we can work with you to preserve your brand and choose the best images for each situation.</p>
-              </section>
-              <section class="box">
+              </article>
+              <article class="box">
                   <h3>Photography <i class="fa fa-camera"></i></h3>
                   <p>We're in the early stages of expanding from graphic design to photography. </p>
-              </section>
+              </article>
           </section>
 
           <section class="one-third column box" >
