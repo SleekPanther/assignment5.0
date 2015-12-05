@@ -12,9 +12,9 @@
                 } elseif ($containing_folder == "positions") {
                     $page_heading = "Positions"; //Set the value to be printed
                 } elseif ($containing_folder == "about") {
-                    $page_heading = "About"; //Set the value to be printed
+                    $page_heading = "About Sleek Panther Productions"; //Set the value to be printed
                 } elseif ($containing_folder == "contact") {
-                    $page_heading = "Contact"; //Set the value to be printed
+                    $page_heading = "Contact Sleek Panther Productions"; //Set the value to be printed
                 }
             ?>
 
