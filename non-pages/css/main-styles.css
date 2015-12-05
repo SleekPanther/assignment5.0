@@ -1,28 +1,35 @@
-/* Main Styles for the whole site  
- press Ctrl+F & search for "qwert" to find the beginning of sections*/
+/* Main Styles for the whole site.  press Ctrl+F & search for "qwert" to find the beginning of sections*/
 
 body {
-    background-color: #FFFF8A; 
+    background: #FFFF8A; /* Old browsers */
+    background: -moz-linear-gradient(left,  #ffffff 0%, #ffff8a 10%, #ffff8a 90%, #ffffff 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(left,  #ffffff 0%, #ffff8a 10%, #ffff8a 90%, #ffffff 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to right,  #ffffff 0%, #ffff8a 10%, #ffff8a 90%, #ffffff 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#ffffff',GradientType=1 ); /* IE6-9 */
+    /*background: linear-gradient(to right, white, #FFFF8A, #FFFF8A, #FFFF8A, #FFFF8A, #FFFF8A, #FFFF8A, #FFFF8A, white); */
     font-size: 2.4em;
+}
+@media (max-width:1200px) { /* @ a smaller screen size, just have a plain background, no gradient */
+    body {
+        background: #FFFF8A;
+    }
 }
 
 /* Header qwert -----------------------------------*/
 header {
     background: orange;
 }
-nav {
-    background-color: aqua;
-}
 #header {
-    width: 800px;
+    /*width: 800px; */
     margin-bottom:-20px;    /* remove extra space below, from unknown */
 }
 
 /* Footer qwert --------------------------------------------*/
 #footer {
     font-size: .7em;
-    width: 450px;
+    width: 330px;
     padding: 10px;
+    background: #F5F5DC;
 }
 footer {
     background-color: #FFCA68;
@@ -32,6 +39,7 @@ footer {
 /* Navigation qwert-------------------------*/
 nav {       /* larger font for links */
     font-size: 1.4em;
+    background-color: aqua;
 }
 nav ul {
     margin: .3em 0 .1em 0;
@@ -41,6 +49,19 @@ nav ul li{ /* remove bullets from navigation */
     list-style-type: none;
     /*padding-right: 2em;*/
 }
+
+/* attempted to make links go 3 per line on small screen
+@media (max-width:1000px) { 
+    .three-links {
+        display: block;
+    }
+}
+@media (max-width:825px) { 
+    .two-links {
+        display: block;
+    }
+}
+*/
 .active {
     text-decoration: underline;
     font-family: courier new, monospace; /* qwerty font change */
@@ -49,12 +70,8 @@ nav ul li{ /* remove bullets from navigation */
 #home {
     
 }
-#contact #contact-map {
-    width:100%;
-    height: 400px;
-    border:0;
-}
-/* gallery------------- */
+
+/* gallery------------- qwert*/
 .galleria {/*This sets the size of the gallery container box (built-in class))*/
 	width: 100%;
         height: 700px;      /* height must be in pixels */
@@ -63,14 +80,19 @@ nav ul li{ /* remove bullets from navigation */
     background: #4A4A4A;
 }
 
+/* contact page styles ------------------------ qwert */
+#contact #contact-map {
+    width:100%;
+    height: 400px;
+    border:0;
+}
 /* need to clear any floats that may exist */
 fieldset{
     border: 1px solid #00498e;
     clear: both;
 }
 
-
-fieldset {
+fieldset {  /* give some padding on large screens */
     padding: 0 .6em;
 }
 @media (max-width:800px) { /*make padding disappear when the screen is too small */
@@ -90,12 +112,9 @@ fieldset.contact label{
         /* the float left above pushes everything back to the left*/
 }
 
-fieldset.contact input{
-    width: 15em; /* works with above to be the same size for the boxes */
-}
-
-fieldset.buttons{
-    border: none;
+fieldset.contact input{  /* this combination of size make the fieldset not go on top of the input boxes */
+    /*width:60%; */
+    min-width: 10em;
 }
 
 fieldset.wrapper {
@@ -124,6 +143,11 @@ label {    /* adds a little space on left & right, so It's not stuck right again
     content: "*";
 }
 
+.mistake { /* when  a mistake occurs, change the background. Had to override skeleton's styles'*/
+    color: #fff;
+    background-color: #f00;
+}
+
 #btnSubmit { /*styles to make the submit button look more like a button */
     display: block;
     background: #0dd39d;
@@ -137,6 +161,10 @@ label {    /* adds a little space on left & right, so It's not stuck right again
     /* give an outline to the button and blur edges */
     box-shadow: 0px 0px 10px 2px #000;
     margin: 10px 0 0 10px;
+}
+#btnSubmit:hover, #btnSubmit:focus { /*make the button look more like a button when hovered or focused */
+    box-shadow: 0px 0px 10px 4px #000;
+    background: #2BFFC6;
 }
 
 /* classes for easy access to floating properties qwert--------------------*/
@@ -190,6 +218,9 @@ figure {
 #noah-img {
     width: 200px;
     padding:0 10px;
+}
+#img-t-shirt {
+    width:140px;
 }
 #success-image, #failure-image {
     width: 300px;

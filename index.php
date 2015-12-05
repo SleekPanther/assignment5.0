@@ -5,32 +5,35 @@
   <!-- Primary Page Layout
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
 
-    
-      <section class="row">
-          <section class="six columns box" >
-              <h4>Example Business</h4>
-              <h1><?php print $path_parts['dirname'] ?></h1>
-              <p>This index.html page is a placeholder with the CSS, font and favicon. It's just waiting for you to add some content! If you need some help hit up the <a href="http://www.getskeleton.com">Skeleton documentation</a>.</p>
-          </section>
-          <section class="six columns box">
-              <h4>Example Business2</h4>
-              <p>asdf This index.html page is a placeholder with the CSS, font and favicon. It's just waiting for you to add some content! If you need some help hit up the <a href="http://www.getskeleton.com">Skeleton documentation</a>.</p>
-          </section>
-      </section>
-
-      <section class="row">
-          <section class="two-thirds column box">
-              <section class="box">2/3 Aenean aliquam ipsum et magna ullamcorper, ut ornare lectus pretium. Nullam hendrerit, mauris at scelerisque semper, turpis turpis molestie erat, a imperdiet sapien sapien eget diam. Donec eget aliquet tellus. Sed porta orci in purus hendrerit, vitae luctus mauris lobortis. Nullam suscipit pharetra libero id tincidunt. Morbi eu elit ac nisi elementum suscipit. Praesent at libero augue. Vestibulum varius max
-              </section>
-              <section class="box">2/3 Aenean aliquam ipsum et magna ullamcorper, ut ornare lectus pretium. Nullam hendrerit, mauris at scelerisque semper, turpis turpis molestie erat, a imperdiet sapien sapien eget diam. Donec eget aliquet tellus. Sed porta orci in purus hendrerit, vitae luctus mauris lobortis. Nullam suscipit pharetra libero id tincidunt. Morbi eu elit ac nisi elementum suscipit. Praesent at libero augue. Vestibulum varius max
-              </section>
-          </section>
-
-          <section class="one-third column box" >
-              elit id tempor. Nullam lacinia dui nulla, sit amet dapibus odio ultricies eget. Pellentesque accumsan tincidunt tempus. Donec mi lorem, semper at metus eu, scelerisque tincidunt quam. Nunc id erat vel lectus suscipit consequat dapibus at tellus. Cras id tristique velit. Etiam dignissim, turpis sit amet sodales auctor, diam arcu ultrices sem, nec congue nisi sem quis justo.
-          </section>
-
+    <article class='row'>
+        <section class='twelve columns box'>
+            <h2>Graphic Design and More</h2>
+            <p>Here at Sleek Panther Productions we aim to satisfy our customers with high-quality graphics at low-costively</p>
+            <p>Do you:</p>
+            <ul>
+                <li>Want to start a business and need a logo</li>
+                <li>Have a logo but don't like it</li>
+                <li>Looking to make T-shirts</li>
+                <li>Need to improve your web graphics</li>
+            </ul>
+            <p>We can work with you to accomplish any of these goals and many more not listed.</p>
         </section>
+    </article>
+    <article class="row ">
+          <section class="one-half column ">
+              <section class="box">
+                  <h3>Want to Learn?</h3>
+                  <p>Do you love drawing or creating art on the computer? Are you interested in seeing what a Graphic Designer does?</p>
+                  <p>Come intern for use to see what this exciting field can offer you.</p>
+              </section>
+          </section>
+
+          <section class="one-half column box" >
+              <h3>Photography</h3>
+              <p>We're starting to branch into photography. So if you need pictures taken, we can be there for you.</p>
+              <p>On the other hand, if you are a photographer looking for employment, contact us because we are hiring new people right now.</p>
+          </section>
+    </article>
   
     <?php include "non-pages/include/footer.php"; ?>
 <!-- End Document –––––––––––––––––––––––––––––––––––––––––––––––––– -->

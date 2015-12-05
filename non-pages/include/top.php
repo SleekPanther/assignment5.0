@@ -52,7 +52,7 @@
         //link to the correct files for the main page. I use pathparts['dirname'] to make sure I know what folder contains the file
         //print '<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css"> <!-- font-awesome glyphs -->';
         if ($containing_folder == "assignment5.0") {
-            print "<!-- CSS For Skeleton–––––––––––––––––––––––––––––––––––––––––––––––––--->\n";
+            print "<!-- CSS For Skeleton–––––––––––––––––––––––––––––––––––––––––––––––––- -->\n";
             print '<link rel="stylesheet" href="non-pages/skeleton-2.0.4/css/normalize.css">'."\n";
             print '<link rel="stylesheet" href="non-pages/skeleton-2.0.4/css/skeleton.css">'."\n";
             print "<!--Font Awesome -->\n";
@@ -61,7 +61,7 @@
             print '<link rel="stylesheet" href="non-pages/css/my-skeleton-styles.css">'."\n";
             print '<link rel="stylesheet" href="non-pages/css/main-styles.css">'."\n";
 
-            print '<!-- Favicon–––––––––––––––––––––––––––––––––––––––––––––––->'."\n";
+            print '<!-- Favicon–––––––––––––––––––––––––––––––––––––––––––––––––- -->'."\n";
             print '<link rel="icon" type="image/png" href="images/0components/favicon.png">'."\n";
         }
         else {  //if it's page other than the home page, it will be 1 directory down, so all links have to go up 1 directory 1st
@@ -78,7 +78,7 @@
             print '<link rel="icon" type="image/png" href="../images/0components/favicon.png">'."\n";
         }
         if ($containing_folder == "gallery") { //link to specific javascript files for gallery to work
-            print "\n".'<script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.js"></script> <!-- link galleria script. Doesn\'t work without jQuery -->'."\n";
+            print "\n".'<script src="https://ajax.googleapis.com/ajax/libs/jquery/1/jquery.js"></script> <!-- link galleria script. Doesn\'t work without jQuery. For some reason, uvm silk server didn\'t work with http and had to be https (worked on localhost though) -->'."\n";
             print '<script src="non-pages/galleria/galleria-1.4.2.min.js"></script>'."\n";
             print "<!-- run galleria -->
 	<script>
