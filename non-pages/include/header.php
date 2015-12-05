@@ -1,5 +1,4 @@
 <!--start header.php-->
-
             <?php
                 //display unique page titles using $pathparts['basename'] to find the containing folder
                 $page_heading="Sleek Panther Productions"; //initialize to a defualt value, so if I forget to include a page, it still gets heading text
@@ -13,18 +12,16 @@
                 } elseif ($containing_folder == "positions") {
                     $page_heading = "Positions"; //Set the value to be printed
                 } elseif ($containing_folder == "about") {
-                    $page_heading = "About"; //Set the value to be printed
+                    $page_heading = "About Sleek Panther Productions"; //Set the value to be printed
                 } elseif ($containing_folder == "contact") {
-                    $page_heading = "Contact"; //Set the value to be printed
+                    $page_heading = "Contact Sleek Panther Productions"; //Set the value to be printed
                 }
             ?>
 
-        <section >
             <header>
-                <section class="margin-auto align-center" id="header">
+                <section class="align-center" id="header">
                     <h1><?php print $page_heading ?></h1><!-- print page heading variable, set in the code above -->
                 </section>
             </header>
-        </section>
 
 <!--end header.php-->

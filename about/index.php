@@ -4,17 +4,14 @@
         
   <!-- Primary Page Layout
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-
-    
       <section class="row">
-          <section class="twelve columns box">
-              <section class="six columns float-right">
-
+          <article class="twelve columns box">
+              <aside class="six columns float-right">
                 <figure id="monitor-img" class="float-right">
                     <img src="../images/about/mirrored-monitors.jpg" alt="Mirroed Monitors">
                     <figcaption>Mirrored Monitor Illusion</figcaption>
                 </figure>
-              </section>
+              </aside>
               <h2>How it all started</h2>
                 <figure id="noah-img" class="float-right">
                       <img src="../images/about/noah-patullo.jpg" alt="Noah Patullo">
@@ -24,7 +21,7 @@
               <p>He started off by messing with photographs to create optical illusions. An early example can be seen on the right.</p>
               <p>He started Sleek Panther Productions in 2012 after realizing that he could turn his hobby into a business. It's still in the early days of existence, but Noah has accomplished on his own so far and is looking to grow the business. He has created logos for branding and T-shirt designs for various small businesses including <a href="http://www.abovenbeyondenergy.com/">Above-N-Beyond Energy</a> and <a href="http://burlingtontaiko.org/">Burlington Taiko</a></p>
               <p>Now that Sleek Panther Productions is getting rolling, Noah has expanded his horizons to include photography as well as graphic design.</p>
-          </section>
+          </article>
       </section>
   
     <?php 
