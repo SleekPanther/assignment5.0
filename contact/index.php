@@ -32,12 +32,12 @@ $yourURL = $domain . $phpSelf;
 $firstName = "";
 $middleName= "";
 $lastName = "";
-$email = "noahpatullo@gmail.com";
+$email = "";
 $formDevice = "Computer";       //this sets the default select box when the form loads
 $productLaunches = true;    // checked
 $promotional = false; // not checked
 $newPositions = false;  //not checked, but multiple could be checked @ the start
-$trafficSource = "Word of mouth";       //This must math text in the php "if($doYouHateForms=="YES I hate forms") print 'checked" to display a default checked value
+$trafficSource = "Word of mouth";       //This must math text in the php "if($trafficSource=="Word of mouth") print 'checked" to display a default checked value
 
 //%^%^%^%^%^%^%^%^%^%^%^%^%^%^%^%^%^%^%
 //

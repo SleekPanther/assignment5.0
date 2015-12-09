@@ -9,13 +9,13 @@
             <section class="twelve columns box">
                 <article class="galleria margin-auto">
                     <?php   //in this section I use php to print the images required for the slideshow. The fileanames are all stored in a csv file
-                        $debug = false;
+                    $debug = false;
 
                     if (isset($_GET["debug"])) {
                         $debug = true;
                     }
 
-                    $myFileName = "non-pages/images-list";
+                    $myFileName = "non-pages/images-list";  //path to your filename
                     $fileExt = ".csv";
                     $filename = $myFileName . $fileExt;
 
