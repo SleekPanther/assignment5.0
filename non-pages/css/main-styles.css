@@ -34,6 +34,9 @@ header {
 footer {
     background-color: #FFCA68;
 }
+.small {
+    font-size: .9em;
+}
 
 
 /* Navigation qwert-------------------------*/
